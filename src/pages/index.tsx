@@ -28,9 +28,9 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 const aboutStats = [
-  { label: "Years of experience", value: "3+" },
-  { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "15+" },
+  { label: "Years of experience", value: "1+" },
+  { label: "Professional Certifications", value: "4+" },
+  { label: "Projects made", value: "10+" },
 ];
 
 const projects = [
@@ -334,8 +334,8 @@ export default function Home() {
             <div className="mt-14">
               <Carousel setApi={setCarouselApi} className="w-full">
                 <CarouselContent>
-                  {projects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/2">
+                  {projects.map((project,index) => (
+                    <CarouselItem key={index} className="md:basis-1/2">
                       <Card id="tilt">
                         <CardHeader className="p-0">
                           <Link href={project.href} target="_blank" passHref>
