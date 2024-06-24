@@ -35,48 +35,55 @@ const aboutStats = [
 
 const projects = [
   {
-    title: "Unqueue",
-    description: "E-commerce platform for selling digital products",
-    image: "/assets/unqueue.webm",
+    title: "BrainStack",
+    description: "Full-Stack web application for Collaborative Task Management",
+    image: "/assets/brainstack.webm",
     href: "https://unqueue.shop/",
   },
   {
-    title: "InfiniteVPS",
-    description: "High performance VPS hosting solution",
-    image: "/assets/infinitevps.webm",
+    title: "OmniFood",
+    description: "Web application for food recipes and cooking courses",
+    image: "/assets/omnifood.webm",
     href: "#",
   },
   {
-    title: "TranslateBot",
-    description: "Powerful Multilingual Translation Bot for Discord",
-    image: "/assets/translate_bot.webm",
+    title: "Portfolio",
+    description: "My personal website",
+    image: "/assets/portfolio.webm",
     href: "https://translatebot.app/",
   },
+];
+
+const projects1 = [
   {
-    title: "Wrona",
-    description: "Robotics-focused technology company",
-    image: "/assets/wrona.jpeg",
+    title: "AI Chess Playing Agent",
+    description: "AI Chess Playing Agent based on heuristics and alpha-beta pruning",
+    image: "/assets/aichess.webm",
     href: "https://www.wrona.com/",
   },
   {
-    title: "This website",
-    description: "My personal website",
-    image: "/assets/portfolio.webm",
+    title: "Voice Assistant",
+    description: "VoiceSphere: Personal voice assistant. ",
+    image: "/assets/peter.webm",
     href: "https://github.com/wendoj/portfolio",
   },
 ];
 
 const services = [
   {
-    service: "Frontend Development",
+    service: "Backend Development",
     description:
-      "Creating stellar user interfaces and web experiences using the latest technologies.",
+      "Developing robust, scalable server-side logic for a wide range of web applications.",
+    icon: Eye,
+  },
+  {
+    service: "Automation",
+    description: "Automating processes to improve efficiency and scalability.",
     icon: Code2,
   },
   {
-    service: "UX Design",
-    description:
-      "Building intuitive, user-centric designs that drive engagement and conversion.",
+    service: "Web Scraping",
+    description: "Extracting data from websites efficiently and reliably.",
     icon: Frame,
   },
   {
@@ -90,12 +97,6 @@ const services = [
     description:
       "Designing websites that look and perform equally well on all devices and screen sizes.",
     icon: MonitorSmartphone,
-  },
-  {
-    service: "Backend Development",
-    description:
-      "Developing robust, scalable server-side logic for a wide range of web applications.",
-    icon: Eye,
   },
 ];
 
@@ -190,9 +191,9 @@ export default function Home() {
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
             >
-              <span className={styles.pill}>next.js</span>
-              <span className={styles.pill}>tailwindcss</span>
-              <span className={styles.pill}>typescript</span>
+              <span className={styles.pill}>python</span>
+              <span className={styles.pill}>django</span>
+              <span className={styles.pill}>react.js</span>
             </div>
             <div>
               <h1
@@ -206,7 +207,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  WendoJ.
+                  Dhruv.
                 </span>
               </h1>
               <p
@@ -215,8 +216,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An experienced full-stack website developer with a passion for
-                crafting unique digital experiences.
+                An experienced Python developer, passionate about building efficient and scalable solutions across web, data, and automation.
               </p>
             </div>
             <span
@@ -225,16 +225,23 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:wendoj@proton.me" passHref>
+              <Link href="mailto:dhruvkhanna930@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
               <Button
                 variant="outline"
-                onClick={() => scrollTo(document.querySelector("#about"))}
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';  // Path to your resume file
+                  link.download = 'resume.pdf';  // Name of the file to be downloaded
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
-                Learn more
+                Resume
               </Button>
             </span>
 
@@ -269,19 +276,7 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I&apos;m an experienced full-stack developer proficient in{" "}
-              <Link
-                href="https://create.t3.gg/"
-                target="_blank"
-                className="underline"
-              >
-                TypeScript, Tailwind, and Next.js
-              </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
-              companies, where I&apos;ve been instrumental in the entire product
-              design process; from ideation and wireframing, through
-              prototyping, to the delivery of the final product, all while
-              efficiently collaborating with cross-functional teams.
+            I am an undergraduate student at IIIT Gwalior, majoring in CSE, with extensive experience in Python development since 2022. My expertise spans a range of projects, from academic assignments to internships and personal projects, where I have been pivotal in various stages of software development. I excel in designing and implementing efficient, scalable applications, and have a strong background in data analysis, web development with frameworks like Django, and automation. I excel in team settings and deliver high-quality solutions.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
@@ -332,10 +327,54 @@ export default function Home() {
 
             {/* Carousel */}
             <div className="mt-14">
-              <Carousel setApi={setCarouselApi} className="w-full">
+              <Carousel setApi={setCarouselApi} className="w-full ">
                 <CarouselContent>
                   {projects.map((project,index) => (
-                    <CarouselItem key={index} className="md:basis-1/2">
+                    <CarouselItem key={index} className="md:basis-1/3">
+                      <Card id="tilt">
+                        <CardHeader className="p-0">
+                          <Link href={project.href} target="_blank" passHref>
+                            {project.image.endsWith(".webm") ? (
+                              <video
+                                src={project.image}
+                                autoPlay
+                                loop
+                                muted
+                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover object-fill"
+                              />
+                            ) : (
+                              <Image
+                                src={project.image}
+                                alt={project.title}
+                                width={600}
+                                height={300}
+                                quality={100}
+                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                              />
+                            )}
+                          </Link>
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter">
+                            {project.description}
+                          </CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+
+              <div className="h-[4rem]">
+
+              </div>
+
+              <Carousel setApi={setCarouselApi} className="w-full ">
+                <CarouselContent>
+                  {projects1.map((project,index) => (
+                    <CarouselItem key={index} className="md:basis-1/3">
                       <Card id="tilt">
                         <CardHeader className="p-0">
                           <Link href={project.href} target="_blank" passHref>
@@ -373,7 +412,7 @@ export default function Home() {
               </Carousel>
               <div className="py-2 text-center text-sm text-muted-foreground">
                 <span className="font-semibold">
-                  {current} / {count}
+                  {/* {current} / {count} */}
                 </span>{" "}
                 projects
               </div>
