@@ -414,7 +414,7 @@ export default function Home() {
                 <span className="font-semibold">
                   {/* {current} / {count} */}
                 </span>{" "}
-                projects
+                Scroll Horizontally
               </div>
             </div>
           </div>
