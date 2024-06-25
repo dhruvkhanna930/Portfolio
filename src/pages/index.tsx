@@ -50,7 +50,7 @@ const projects = [
     title: "Portfolio",
     description: "My personal website",
     image: "/assets/portfolio.webm",
-    href: "https://github.com/dhruvkhanna930/Portfolio",
+    href: "https://dhruv-portfolio-v2.vercel.app/",
   },
 ];
 
