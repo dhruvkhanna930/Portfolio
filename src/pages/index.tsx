@@ -38,19 +38,19 @@ const projects = [
     title: "BrainStack",
     description: "Full-Stack web application for Collaborative Task Management",
     image: "/assets/brainstack.webm",
-    href: "https://unqueue.shop/",
+    href: "https://github.com/dhruvkhanna930/BrainStack",
   },
   {
     title: "OmniFood",
     description: "Web application for food recipes and cooking courses",
     image: "/assets/omnifood.webm",
-    href: "#",
+    href: "https://664d9d04634e2ba7487a8053--lustrous-custard-35c186.netlify.app/",
   },
   {
     title: "Portfolio",
     description: "My personal website",
     image: "/assets/portfolio.webm",
-    href: "https://translatebot.app/",
+    href: "https://github.com/dhruvkhanna930/Portfolio",
   },
 ];
 
@@ -59,13 +59,13 @@ const projects1 = [
     title: "AI Chess Playing Agent",
     description: "AI Chess Playing Agent based on heuristics and alpha-beta pruning",
     image: "/assets/aichess.webm",
-    href: "https://www.wrona.com/",
+    href: "https://github.com/dhruvkhanna930/AI_Chess_Agent",
   },
   {
     title: "Voice Assistant",
     description: "VoiceSphere: Personal voice assistant. ",
     image: "/assets/peter.webm",
-    href: "https://github.com/wendoj/portfolio",
+    href: "https://github.com/dhruvkhanna930/VoiceSphere",
   },
 ];
 
